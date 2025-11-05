@@ -1,0 +1,12 @@
+name: Hello DevOps Every Monday
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"   # Runs at 8:00 AM every Monday (UTC Time)
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: echo "Hello DevOps"
