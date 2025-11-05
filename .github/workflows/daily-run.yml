@@ -1,0 +1,16 @@
+name: Daily Python Script Runner
+
+on:
+  schedule:
+    - cron: "0 9 * * *"   # Runs every day at 9:00 AM (UTC)
+    
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run Python Script
+        run: python daily.py
